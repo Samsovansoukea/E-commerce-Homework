@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="../E-commerce/assets/">
+    <title>Document</title>
+</head>
+<style>
+*{
+    margin:0;
+    padding: 0;
+
+}
+:root{
+    --logo-color: rgb(20, 196, 20); 
+    --shadow-color: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    --background-web:rgb(240, 242, 245);
+}
+body::-webkit-scrollbar{
+    display: none;
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: auto;
+    cursor: pointer;
+}
+.background-img{
+    background-image: url("../img/Cloths-bc740630f228713e4bb0de8a7bffce22.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+    box-shadow: var(--shadow-color);
+}
+
+
+.font-style{
+    color:var(--logo-color) ;
+}
+.nav-link{
+    list-style: none;
+}
+.nav-link li{
+    display: inline-block;
+}
+
+.brand-logo{
+    margin-right: auto;
+}
+.brand-logo a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.join-link{
+    color: black;
+    border: 1px solid gray;
+    box-shadow:var(--shadow-color);
+}
+.join-link:hover{
+    color: white;
+    background-color: rgb(122, 115, 115);
+}
+.nav-link li a{
+
+    padding: 10px 28px 10px 28px;
+    transition: all 0.3s ease 0.3s;
+    text-decoration: none;
+}
+.Help{
+    color: black;
+}
+.Help:hover{
+    color:gray;
+}
+.contain{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top:3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.icon-help{
+    width: 20px;
+    vertical-align: middle;
+}
+
+
+.shop-image{
+    margin-top: 2%;
+    
+    height: 50%;
+    
+    text-align: center;
+    padding: 5%;
+}
+.shop-text{
+    padding: 2%;
+    font-weight: bold;
+    margin: auto;
+    font-size: 20px;
+    
+    transition: all 0.3s ease 0.3s;
+}
+.shop-text:hover{
+    color: gray;
+}
+.shop-para{
+    color: gray;
+    transition: all 0.3s ease 0.3s;
+}
+.shop-para:hover{
+    color: black;
+}
+.search-product{
+    padding: 5%;
+}
+.search-child{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.1s ease 0.1s;
+    border: 1px solid gray;
+}
+.search-child:hover{
+    border:none;
+    box-shadow: var(--shadow-color);
+
+}
+
+
+.card-content{
+    display: flex;
+    padding: 3% 2% 3% 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-body{
+    margin: 2%;
+    display: flex;
+   
+    align-items: center;
+    padding: 30px 20px 30px 20px;
+    box-shadow: var(--shadow-color);
+    justify-content: flex-end;
+    width: 26%;
+    
+}
+.card-text{
+    margin-right: auto;
+}
+.title-card{
+    color: white;
+    padding-bottom:10px ;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.description-card{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 15px;
+    margin-bottom: 30%;
+}
+
+.card-text a{
+    background-color: white;
+    padding: 12px 10px 12px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    box-shadow: var(--shadow-color);
+    transition: all 0.3s ease 0.3s;
+    
+}
+.card-text a:hover{
+    background-color: gray;
+    color: white;
+}
+.delivery-img{
+    width:100px;
+}
+/* sidebar */
+.container-content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.content-link{
+    width: 25%;
+    padding-top: 2%;
+}
+
+.content-link a{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    
+}
+.content-link a:hover{
+    color: black;
+    
+}
+.content-link .active{
+    color: black;
+    opacity: 1;
+}
+.content-link li{
+    
+    opacity: 0.5;
+    padding: 5%;
+    margin-left: 10%;
+    transition: all 0.3s ease 0.3s;
+}
+.content-link li:hover{
+    opacity: 1;
+}
+.content-link ul{
+
+    list-style: none;
+}
+.content-link img{
+    width: 40px;
+    vertical-align:middle;
+}
+
+.content-web{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--background-web);
+    width: 75%;
+}
+
+
+@media screen and (max-width:1246px){
+    
+}
+@media screen and (max-width:1200px){
+    .card-content{
+        justify-content: center;
+    }
+    .card-body{
+        margin-left: 2%;
+        width: 25%;
+    }
+}
+@media screen and (max-width:900px){
+    .content-web{
+        width: 75%;
+    }
+    .content-link{
+        width: 25%;
+    }
+    .content-link a{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .brand-logo a{
+        font-size: 16px;
+    }
+    .shop-text{
+        font-size: 16px;
+    }
+    .shop-para{
+        font-size: 14px;
+    }
+    .join-link{
+        font-size: 14px;
+    }
+    .Help{
+        font-size: 14px;
+    }
+    .card-content{
+        justify-content: center;
+    }
+    .card-body{
+        width: 90%;
+    }
+}
+@media screen and (max-width:900px){
+    .content-web{
+        width: 75%;
+    }
+    .content-link{
+        width: 25%;
+    }
+    .content-link a{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .brand-logo a{
+        font-size: 16px;
+    }
+    .shop-text{
+        font-size: 16px;
+    }
+    .shop-para{
+        font-size: 14px;
+    }
+    .join-link{
+        font-size: 14px;
+    }
+    .Help{
+        font-size: 14px;
+    }
+    .card-content{
+        justify-content: center;
+    }
+    .card-body{
+        width: 90%;
+    }
+}
+@media screen and (max-width:768px){
+    
+    .brand-logo a{
+        font-size: 16px;
+    }
+    .shop-text{
+        font-size: 16px;
+    }
+    .shop-para{
+        font-size: 14px;
+    }
+    .join-link{
+        font-size: 14px;
+    }
+    .Help{
+        font-size: 14px;
+    }
+    .card-content{
+        justify-content: center;
+    }
+    .card-body{
+        width: 80%;
+    }
+    
+ 
+}
+@media screen and (max-width:687px){
+    .content-web{
+        width: 100%;
+    }
+    
+    .content-link{
+        width: 100%;
+    }
+    .brand-logo a{
+        font-size: 12px;
+    }
+    .nav-link li a{
+        padding: 4px 8px 4px 8px;
+        text-decoration: none;
+    }
+    .icon-help{
+        width:15px ;
+    }
+    .join-link{
+        font-size: 10px;
+    }
+    .Help{
+        font-size: 10px;
+    }
+   
+    .shop-text{
+        font-size: 12px;
+    }
+    .shop-para{
+        font-size: 10px;
+    }
+    .search-child{
+        font-size: 10px;
+    }
+}
+.content-web{
+    overflow: auto;
+}
+.content-shirt{
+    display: flex;
+    cursor: pointer;
+    margin-top: 4%;
+    padding: 4% 0 4% 0;
+    width:90%;
+    background-color: white;
+    box-shadow: var(--shadow-color);
+}
+.shirt-image{
+    border-right: 2px solid rgb(231, 228, 228);
+ 
+}
+.shirt-image>button{
+    margin-left: 80%;
+    padding: 2% 4% 2% 4%;
+    border-radius: 10px;
+    transition: all 0.3s ease 0.3s;
+    border: none;
+    transition: all 0.3s ease 0.3s;
+    background-color: rgb(255, 166, 0);
+}
+.shirt-image>button:hover{
+    background-color: rgb(233, 149, 40);
+    color:white;
+}
+
+.img-clothes{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.img-clothes >#img-view{
+    width: 50%;
+}
+.shirt-image{
+    width: 50%;
+    display: block;
+}
+.branch-shirt{
+    display: flex;
+
+    align-items: center;
+}
+.branch-shirt >img{
+    width: 20%;
+    margin-left:10%;
+    border: 1px solid rgb(192, 191, 191);
+    margin-bottom: 2%;
+
+}
+.text-content{
+    cursor: pointer;
+    width: 50%;
+    padding:0 3% 0 3% ;
+}
+
+.text-content>span{
+    margin-top: 10%;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+span>#span{
+    margin-top: 20%;
+}
+span>#span1{
+    margin-bottom: 25%;
+}
+.header-title{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-title>span{
+    color: rgb(14, 175, 14);
+}
+.header-title>.price{
+    margin-right: 10%;
+    text-decoration: line-through;
+    color: rgb(245, 42, 42);
+}
+.header-title>span{
+    margin-right: 4%;
+}
+.header-title>h2{
+    margin-right: auto;
+}
+.text-content a>img{
+    width: 5%;
+    vertical-align: middle;
+}
+.text-content a{
+    font-weight: bolder;
+    padding: 10px;
+    border: 1px solid rgb(168, 165, 165);
+    transition: all 0.3s ease 0.3s;
+  
+}
+.text-content a:hover{
+    box-shadow: var(--shadow-color);
+    background-color: gray;
+    color: white;
+}
+
+.button-shirt{
+    margin-top: 8%;
+}
+.button-shirt>button{
+    border: none;
+    margin-right: 4%;
+    padding: 2% 3% 2% 3%;
+    border-radius: 10px;
+    background-color: lightgray;
+    transition: all 0.3s ease 0.3s;
+
+}
+.button-shirt>button:hover{
+    background-color: gray;
+    color: white;
+    box-shadow: var(--shadow-color);
+}
+.comment-content{
+    width: 90%;
+    margin-top: 5%;
+}
+.comment-content>h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.comment-content>.card-comment{
+    
+    background-color: white;    
+    padding: 4%;
+    margin-top: 1%;
+    box-shadow: var(--shadow-color);
+}
+.card-comment>.avatar{
+    display: flex;
+    align-items: center;
+
+}
+.avatar>img{
+    width: 8%;
+    padding-right:2% ;
+}
+
+.card-profile>a{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: rgb(0, 130, 252);
+}
+.card-profile>span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size:14px;
+    color: gray;
+    margin-top: 3%;
+}
+.text-comment{
+    margin-top: 5%;
+}
+.text-comment>span>p{
+    font-size: 15px;
+    padding-top:3px;
+    font-weight: 500;
+}
+.review-form{
+    width: 90%;
+    margin-top: 2%;
+    position: relative;
+}
+fieldset{
+    background-color: white;
+    box-shadow: var(--shadow-color);
+}
+fieldset>textarea{
+    width: 96%;
+    height: 300px;
+    padding: 2%;
+    border:none;
+}
+.group-button{
+    padding-top: 2%;
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.reply>img{
+    
+    color: white;
+    margin-right:5% ;
+    width: 25%;
+    vertical-align: middle;
+}
+.reply{
+    width: 10%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 5px 10px 5px;
+    border: 1px solid gray;
+    background-color: rgb(12, 167, 12);
+    color: white;
+    margin-right: 2%;
+    transition: all 0.3s ease 0.3s;
+
+}
+.reply:hover{
+    background-color: green;
+    box-shadow: var(--shadow-color);
+}
+
+.cancel{
+    width: 10%;
+    font-size: 16px;
+    font-weight: bold;
+    padding:10px 5px 10px 5px;
+    border: 1px solid gray;
+    background-color: white;
+    transition: all 0.3s ease 0.3s;
+}
+.cancel:hover{
+    color: white;
+    background-color: gray;
+    box-shadow: var(--shadow-color);
+}
+.group-button{
+    margin-bottom: 3%;
+}
+.cancel>img{
+    width: 22%;
+    margin-right:5% ;
+    
+    vertical-align: middle;
+}
+@media screen and (max-width:900px){
+    .reply{
+        width: 15%;
+    }
+    .cancel{
+        width: 15%;
+    }
+    .header-title>h2{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:500px){
+    .content-shirt{
+        flex-wrap: wrap;
+        
+        border-bottom: 1px solid gray;
+    }
+    .shirt-image{
+        width: 100%;
+        border-right: none;
+        margin-bottom: 2%;
+    }
+    .text-content{
+        width: 100%;
+    }
+    .header-title{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .header-title>h2{
+        margin-right: auto;
+    }
+    span > #span1{
+        margin-bottom: 10%;
+    }
+    span >#span{
+        margin-top: 10%;
+    }
+    .reply{
+        width: 25%;
+    }
+    .cancel{
+        width: 25%;
+    }
+}
+</style>
+<body>
+    <div class="background-img">
+       
+        <nav class="contain">
+            <div class="brand-logo"><a href="Homepage.html"><h1>Awesome <span class="font-style">Shop</span></h1></a></div>
+            <ul class="nav-link">
+                <li><a href="" class="Help"><img class="icon-help" src="../E-commerce/assets/help_black.png" alt=""> Need help</a></li>
+                <li><a href="" class="join-link">Join</a></li>
+            </ul>
+        </nav>
+
+        
+        <div class="shop-image">
+            <div class="shop-text">
+                <h1>Shop your designer dresses</h1>
+            </div>
+            <div class="shop-para">
+                Ready to wear dereses tallored for you from online. Hurry up while stack lasts.
+            </div>
+            <div class="search-product">
+                <input  type="search" placeholder="&#128269; Search your products from here" class= "search-child">
+            </div>
+        </div>
+    </div>
+    
+    
+     <div class="card-content">
+        <div class="card-body" style="background-color: rgb(219, 100, 100);">
+            <div class="card-text" >
+                <h4 class="title-card">Coupon Savings</h4>
+                <p class="description-card">Up to 60% off everyday</p>
+                <a href="">Shop Coupone</a>
+            </div>
+            <img src="../E-commerce/assets/icons8-coupon-100.png" alt="">
+        </div>
+        <div class="card-body" style="background-color: rgb(252, 149, 111);">
+            <div class="card-text">
+                <h4 class="title-card">Free Delivery</h4>
+                <p class="description-card">With selected items</p>
+                <a href="">Deliver Now</a>
+            </div>
+            <img src="../E-commerce/assets/checked-truck.png" alt="" class="delivery-img">
+        </div>
+        <div class="card-body" style="background-color: rgb(202, 75, 202);">
+            <div class="card-text">
+                <h4 class="title-card">Gift Voucher</h4>
+                <p class="description-card">With personal core items</p>
+                <a href="">Gift Now</a>
+            </div>
+            <img src="../E-commerce/assets/gift--v1.png" alt="" class="">
+        </div>
+    </div>      
+      
+      <div class="container-content">
+        <div class="content-link">
+            <ul>
+                <li><a href=""> <h3><img src="../E-commerce/assets/icon_laptop.png" alt="">&ThickSpace; Electronics</h3></a></li>
+                <li><a href=""><h3><img src="../E-commerce/assets/icon_bag-front-view.png" alt="">&ThickSpace; Hand bags</h3></a></li>
+                <li><a href=""><h3><img src="../E-commerce/assets/icon_wallet.png" alt="">&ThickSpace; Wallet</h3></a></li>
+                <li class="active"><a href="" ><h3><img src="../E-commerce/assets/icon_clothes.png" alt="" >&ThickSpace; Clothes</h3></a></li>
+            </ul>
+        </div>
+        <div class="content-web">
+            <div class="content-shirt">
+            
+                <div class="shirt-image">
+                    <button>20%</button>
+                    <div class="img-clothes">
+                        <img src="../E-commerce/assets/clothes-(1).png" id="img-view" alt="">
+                    </div>
+                    <div class="branch-shirt">
+                        <img src="../E-commerce/assets/clothes (1).png" alt="">
+                        <img src="../E-commerce/assets/clothes (1).png" alt="">
+                        <img src="../E-commerce/assets/clothes (1).png" alt="">
+                    </div>
+                </div>
+                <div class="text-content">
+                    <div class="header-title">
+                        <h2>White T-Shirt - Nike</h2>
+                        <span class="price">$15</span>
+                        <span>$12</span>
+                    </div>
+                   <span><p id="span">Nike Womens Half Zip Lightweight Hooded Shirt Top Arthetic</p></span>
+                   <span><p id="span1">Stretch Size M</p></span>
+                   <span><a><img src="../E-commerce/assets/shopping-cart.png" alt=""> cart</a></span>
+                   <div class="button-shirt">
+                       <button>Make T-shirt</button>
+                       <button>Single color</button>
+                   </div>
+                </div>
+            </div>
+            <div class="comment-content">
+                <h2>Comments</h2>
+                <div class="card-comment">
+                    <div class="avatar">
+                        <img src="../E-commerce/assets/avarta.svg" alt="">
+                        <div class="card-profile">
+                            <a href="">Anonymous</a>
+                            <span><p>Today 4:21pm - 12.06.2020</p></span>
+                        </div>
+                    </div>
+                    <div class="text-comment">
+                        <span class="text-comment-top"><p> Lorem Inpsum is simply dummy text of the printing and type-setting industry. Lorem Inpsum has been the industry's</p></span>
+                        <span><p>standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</p></span>
+                        <span><p>make a type specimen book. It has survived not only five centuries, but also the leap into electronics typesetting.</p></span>
+                        <span><p>remaining essentially unchanged</p></span>
+                    </div>
+                </div>
+                <div class="card-comment">
+                    <div class="avatar">
+                        <img src="../E-commerce/assets/avarta.svg" alt="">
+                        <div class="card-profile">
+                            <a href="">Anonymous</a>
+                            <span><p>Today 4:21pm - 12.06.2020</p></span>
+                        </div>
+                    </div>
+                    <div class="text-comment">
+                        <span class="text-comment-top"><p> Lorem Inpsum is simply dummy text of the printing and type-setting industry. Lorem Inpsum has been the industry's</p></span>
+                        <span><p>standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to</p></span>
+                        <span><p>make a type specimen book. It has survived not only five centuries, but also the leap into electronics typesetting.</p></span>
+                        <span><p>remaining essentially unchanged</p></span>
+                    </div>
+                </div>
+            </div>
+            <form action="" class="review-form">
+                <fieldset>
+                    <legend>Write your review here</legend> 
+                    <textarea name="" id="review"></textarea>
+                </fieldset>
+            </form>
+            <div class="group-button">
+                <button class="reply"><img src="../E-commerce/assets/reply-send-resend-arrow-left-512.png" alt="">send</button>
+                <button class="cancel"><img src="../E-commerce/assets/close.svg" alt="">cancel</button>
+            </div>
+           
+        </div>
+    </div>   
+</body>
+</html>

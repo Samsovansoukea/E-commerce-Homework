@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="StyleSheet" href="../E-commerce/assets/"
+  <title></title>
+</head>
+<style>
+  *{
+    margin:0;
+    padding: 0;
+
+}
+:root{
+    --logo-color: rgb(20, 196, 20); 
+    --shadow-color: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    --background-web:rgb(240, 242, 245);
+}
+body::-webkit-scrollbar{
+    display: none;
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: auto;
+    cursor: pointer;
+}
+.background-img{
+    background-image: url("../E-commerce/assets/Cloths-bc740630f228713e4bb0de8a7bffce22.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+   
+    box-shadow: var(--shadow-color);
+}
+
+
+.font-style{
+    color:var(--logo-color) ;
+}
+.nav-link{
+    list-style: none;
+}
+.nav-link li{
+    display: inline-block;
+}
+
+.brand-logo{
+    margin-right: auto;
+}
+.brand-logo a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.join-link{
+    color: black;
+    border: 1px solid gray;
+    box-shadow:var(--shadow-color);
+}
+.join-link:hover{
+    color: white;
+    background-color: rgb(122, 115, 115);
+}
+.nav-link li a{
+
+    padding: 10px 28px 10px 28px;
+    transition: all 0.3s ease 0.3s;
+    text-decoration: none;
+}
+.Help{
+    color: black;
+}
+.Help:hover{
+    color:gray;
+}
+.contain{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top:3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.icon-help{
+    width: 20px;
+    vertical-align: middle;
+}
+
+
+.shop-image{
+    margin-top: 2%;
+    
+    height: 50%;
+    text-align: center;
+    padding: 5%;
+}
+.shop-text{
+    padding: 2%;
+    font-weight: bold;
+    margin: auto;
+    font-size: 20px;
+    
+    transition: all 0.3s ease 0.3s;
+}
+.shop-text:hover{
+    color: gray;
+}
+.shop-para{
+    color: gray;
+    transition: all 0.3s ease 0.3s;
+}
+.shop-para:hover{
+    color: black;
+}
+.search-product{
+    padding: 5%;
+}
+.search-child{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.1s ease 0.1s;
+    border: 1px solid gray;
+}
+.search-child:hover{
+    border:none;
+    box-shadow: var(--shadow-color);
+
+}
+
+/* card-otherstuff */
+.card-content{
+    display: flex;
+    padding: 3% 2% 3% 2%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card-body{
+    margin: 2%;
+    display: flex;
+   
+    align-items: center;
+    padding: 30px 20px 30px 20px;
+    box-shadow: var(--shadow-color);
+    justify-content: flex-end;
+    width: 26%;
+ 
+}
+.card-text{
+    margin-right: auto;
+}
+.title-card{
+    color: white;
+    padding-bottom:10px ;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.description-card{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 15px;
+    margin-bottom: 30%;
+}
+
+.card-text a{
+    background-color: white;
+    padding: 12px 10px 12px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    box-shadow: var(--shadow-color);
+    transition: all 0.3s ease 0.3s;
+    
+}
+.card-text a:hover{
+    background-color: gray;
+    color: white;
+}
+.delivery-img{
+    width:100px;
+}
+
+.container-content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.content-link{
+    width: 25%;
+    padding-top: 2%;
+}
+
+.content-link a{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    
+}
+.content-link a:hover{
+    color: black;
+    
+}
+.content-link .active{
+    color: black;
+    opacity: 1;
+}
+.content-link li{
+    
+    opacity: 0.5;
+    padding: 5%;
+    margin-left: 10%;
+    transition: all 0.3s ease 0.3s;
+}
+.content-link li:hover{
+    opacity: 1;
+}
+.content-link ul{
+
+    list-style: none;
+}
+.content-link img{
+    width: 40px;
+    vertical-align:middle;
+}
+
+.content-web{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--background-web);
+    width: 75%;
+}
+
+
+@media screen and (max-width:1246px){
+    /* .card-body{
+        width: 26%;
+    } */
+}
+@media screen and (max-width:1200px){
+    .card-content{
+        justify-content: center;
+    }
+    .card-body{
+        margin-left: 2%;
+        width: 25%;
+    }
+}
+@media screen and (max-width:900px){
+    .content-web{
+        width: 75%;
+    }
+    .content-link{
+        width: 25%;
+    }
+    .content-link a{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .brand-logo a{
+        font-size: 16px;
+    }
+    .shop-text{
+        font-size: 16px;
+    }
+    .shop-para{
+        font-size: 14px;
+    }
+    .join-link{
+        font-size: 14px;
+    }
+    .Help{
+        font-size: 14px;
+    }
+    .card-content{
+        justify-content: center;
+    }
+    .card-body{
+        width: 90%;
+    }
+}
+@media screen and (max-width:900px){
+    .content-web{
+        width: 75%;
+    }
+    .content-link{
+        width: 25%;
+    }
+    .content-link a{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .brand-logo a{
+        font-size: 16px;
+    }
+    .shop-text{
+        font-size: 16px;
+    }
+    .shop-para{
+        font-size: 14px;
+    }
+    .join-link{
+        font-size: 14px;
+    }
+    .Help{
+        font-size: 14px;
+    }
+    .card-content{
+        justify-content: center;
+    }
+    .card-body{
+        width: 90%;
+    }
+}
+@media screen and (max-width:768px){
+    
+    .brand-logo a{
+        font-size: 16px;
+    }
+    .shop-text{
+        font-size: 16px;
+    }
+    .shop-para{
+        font-size: 14px;
+    }
+    .join-link{
+        font-size: 14px;
+    }
+    .Help{
+        font-size: 14px;
+    }
+    .card-content{
+        justify-content: center;
+    }
+    .card-body{
+        width: 80%;
+    }
+    
+ 
+}
+@media screen and (max-width:687px){
+    .content-web{
+        width: 100%;
+    }
+    
+    .content-link{
+        width: 100%;
+    }
+    .brand-logo a{
+        font-size: 12px;
+    }
+    .nav-link li a{
+        padding: 4px 8px 4px 8px;
+        text-decoration: none;
+    }
+    .icon-help{
+        width:15px ;
+    }
+    .join-link{
+        font-size: 10px;
+    }
+    .Help{
+        font-size: 10px;
+    }
+    
+    .shop-text{
+        font-size: 12px;
+    }
+    .shop-para{
+        font-size: 10px;
+    }
+    .search-child{
+        font-size: 10px;
+    }
+}
+.card-shirt{
+    background-color: white;
+    padding: 5px;
+    width: 27%;
+    margin:2%;
+    box-shadow: var(--shadow-color);
+}
+.card-shirt button{
+    background-color: rgb(255, 196, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin-top: 1%;
+    margin-left:80%;
+}
+.card-shirt button:hover{
+    color: gray;
+    box-shadow: var(--shadow-color);
+}
+
+.text-shirt{
+    font-size: 13px;
+    padding: 10px 10px 20px 10px;
+}
+.text-shirt span{
+    margin-top: 10px;
+
+}
+.clothes-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-shirt img{
+    width: 80%;
+}
+
+.cart-para{
+    margin-right: auto;
+}
+.cart-para p{
+    padding: 5px 0 0 10px;
+}
+.cart-para .discount{
+    color: red;
+    text-decoration: line-through;
+}
+.text-img .after-discount{
+    color: green;
+    font-size: 15px;
+
+}
+.cart{
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
+    padding: 0 10px 0 0;
+}
+.cart a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: var(--shadow-color);
+    padding: 10px 12px 10px 12px;
+    font-weight: bold;
+    font-size: 13px;
+    transition: all 0.3s ease 0.3s;
+
+}
+.text-img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.text-img p{
+    margin-right: auto;
+    margin-left: 3%;
+    
+}
+.text-img a{
+    margin-bottom: 2%;
+}
+.card-shirt .clothes{
+    width: 70%;
+    margin-bottom: 10%;
+}
+.cart a:hover{
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+.cart-para{
+    font-size: 15px;
+    padding-top: 10px;
+}
+.cart img{
+    width: 20px;
+    vertical-align: middle;
+}
+.load-more {
+    display: block;
+    margin: auto;
+    margin-bottom: 2%;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease 0.3s;
+    background-color: rgb(78, 221, 78);
+}
+.load-more:hover{
+    box-shadow: var(--shadow-color);
+    background-color: white;
+    border:1px solid rgb(78, 221, 78);
+    color: rgb(78, 221, 78);
+}
+
+@media screen and (max-width:900px){
+    .card-shirt{
+        width: 40%;
+        margin-left: 5%;
+    }
+    .card-shirt button{
+        margin-left: 80%;
+    }
+}
+@media screen and (max-width:687px){
+    .card-shirt{
+        width: 80%;
+        margin-top: 10%;
+    }
+    .load-more{
+        margin-top: 5%;
+    }
+}
+</style>
+<body>
+  <div class="background-img">
+  
+    <nav class="contain">
+        <div class="brand-logo"><a href=""><h1>Awesome <span class="font-style">Shop</span></h1></a></div>
+        <ul class="nav-link">
+            <li><a href="" class="Help"><img class="icon-help" src="../E-commerce/assets/help_black.png" alt=""> Need help</a></li>
+            <li><a href="" class="join-link">Join</a></li>
+        </ul>
+    </nav>
+
+ 
+    <div class="shop-image">
+        <div class="shop-text">
+            <h1>Shop your designer dresses</h1>
+        </div>
+        <div class="shop-para">
+            Ready to wear dereses tallored for you from online. Hurry up while stack lasts.
+        </div>
+        <div class="search-product">
+            <input  type="search" placeholder="&#128269; Search your products from here" class= "search-child">
+        </div>
+    </div>
+</div>
+
+<div class="card-content">
+    <div class="card-body" style="background-color: rgb(219, 100, 100);">
+        <div class="card-text" >
+            <h4 class="title-card">Coupon Savings</h4>
+            <p class="description-card">Up to 60% off everyday</p>
+            <a href="">Shop Coupone</a>
+        </div>
+        <img src="../E-commerce/assets/icons8-coupon-100.png" alt="">
+    </div>
+    <div class="card-body" style="background-color: rgb(252, 149, 111);">
+        <div class="card-text">
+            <h4 class="title-card">Free Delivery</h4>
+            <p class="description-card">With selected items</p>
+            <a href="">Deliver Now</a>
+        </div>
+        <img src="../E-commerce/assets/checked-truck.png" alt="" class="delivery-img">
+    </div>
+    <div class="card-body" style="background-color: rgb(202, 75, 202);">
+        <div class="card-text">
+            <h4 class="title-card">Gift Voucher</h4>
+            <p class="description-card">With personal core items</p>
+            <a href="">Gift Now</a>
+        </div>
+        <img src="../E-commerce/assets/gift--v1.png" alt="" class="">
+    </div>
+</div>      
+
+
+<div class="container-content">
+    <div class="content-link">
+        <ul>
+            <li><a href=""> <h3><img src="../E-commerce/assets/icon_laptop.png" alt="">&ThickSpace; Electronics</h3></a></li>
+            <li><a href=""><h3><img src="../E-commerce/assets/icon_bag-front-view.png" alt="">&ThickSpace; Hand bags</h3></a></li>
+            <li><a href=""><h3><img src="../E-commerce/assets/icon_wallet.png" alt="">&ThickSpace; Wallet</h3></a></li>
+            <li class="active"><a href="Product.html" ><h3><img src="..../E-commerce/assets//icon_clothes.png" alt="" >&ThickSpace; Clothes</h3></a></li>
+        </ul>
+    </div>
+    <div class="content-web">
+        <div class="card-shirt">
+            <button>20%</button>
+            <div class="clothes-center">
+                <img src="../E-commerce/assets/clothes-(1).png" alt="">
+            </div>
+            <div class="text-shirt">
+                <p>Nike Womens Pink Haft Zip <br>
+                    <span>Lightweight Hooded Shirt Top </span><br>
+                    <span>Arthletic Stretch Size M</span></p>
+            </div>
+            <div class="cart">
+                <div class="cart-para">
+                    <p class="discount">$15</p>
+                </div>
+                <div class="text-img">
+                    <p class="after-discount">$12</p>
+                    <a href="Product.html"><img src="../E-commerce/assets/shopping-cart.png" alt=""> Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-shirt">
+            <button>20%</button>
+            <div class="clothes-center">
+                <img src="../E-commerce/assets/clothes-(1).png" alt="">
+            </div>
+            <div class="text-shirt">
+                <p>Nike Womens Pink Haft Zip <br>
+                    <span>Lightweight Hooded Shirt Top </span><br>
+                    <span>Arthletic Stretch Size M</span></p>
+            </div>
+            <div class="cart">
+                <div class="cart-para">
+                    <p class="discount">$15</p>
+                </div>
+                <div class="text-img">
+                    <p class="after-discount">$12</p>
+                    <a href="Product.html"><img src="../E-commerce/assets/shopping-cart.png" alt=""> Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-shirt">
+            <button>20%</button>
+            <div class="clothes-center">
+                <img src="../E-commerce/assets/clothes-(1).png" alt="" >
+            </div>
+            <div class="text-shirt">
+                <p>Nike Womens Pink Haft Zip <br>
+                    <span>Lightweight Hooded Shirt Top </span><br>
+                    <span>Arthletic Stretch Size M</span></p>
+            </div>
+            <div class="cart">
+                <div class="cart-para">
+                    <p class="discount">$15</p>
+                </div>
+                <div class="text-img">
+                    <p class="after-discount">$12</p>
+                    <a href="Product.html"><img src="../E-commerce/assets/shopping-cart.png" alt=""> Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-shirt">
+            <button>20%</button>
+            <div class="clothes-center">
+                <img src="../E-commerce/assets/clothes-(1).png" alt="" class="clothes">
+            </div>
+            <div class="text-shirt">
+                <p>Nike Womens Pink Haft Zip <br>
+                    <span>Lightweight Hooded Shirt Top </span><br>
+                    <span>Arthletic Stretch Size M</span></p>
+            </div>
+            <div class="cart">
+                <div class="cart-para">
+                    <p class="discount">$15</p>
+                </div>
+                <div class="text-img">
+                    <p class="after-discount">$12</p>
+                    <a href=""><img src="../E-commerce/assets/shopping-cart.png" alt=""> Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-shirt">
+            <button>20%</button>
+            <div class="clothes-center">
+                <img src="../E-commerce/assets/clothes-(1).png" alt="" >
+            </div>
+            <div class="text-shirt">
+                <p>Nike Womens Pink Haft Zip <br>
+                    <span>Lightweight Hooded Shirt Top </span><br>
+                    <span>Arthletic Stretch Size M</span></p>
+            </div>
+            <div class="cart">
+                <div class="cart-para">
+                    <p class="discount">$15</p>
+                </div>
+                <div class="text-img">
+                    <p class="after-discount">$12</p>
+                    <a href="Product.html"><img src="../E-commerce/assets/shopping-cart.png" alt=""> Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-shirt">
+            <button>20%</button>
+            <div class="clothes-center">
+                <img src="../E-commerce/assets/shopify.png" alt="" class="clothes">
+            </div>
+            <div class="text-shirt">
+                <p>Nike Womens Pink Haft Zip <br>
+                    <span>Lightweight Hooded Shirt Top </span><br>
+                    <span>Arthletic Stretch Size M</span></p>
+            </div>
+            <div class="cart">
+                <div class="cart-para">
+                    <p class="discount">$15</p>
+                </div>
+                <div class="text-img">
+                    <p class="after-discount">$12</p>
+                    <a href="Product.html"><img  src="../E-commerce/assets/shopping-cart.png" alt=""> Cart</a>
+                </div>
+            </div>
+        </div>
+            <button class="load-more">Load More</button>
+        
+    </div>
+    
+</div>
+
+
+</body>
+</html>
